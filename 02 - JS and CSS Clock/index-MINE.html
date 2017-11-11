@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS + CSS Clock</title>
+</head>
+<body>
+
+
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+
+
+  <style>
+    html {
+      background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+      background-size:cover;
+      font-family:'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display:flex;
+      flex:1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border:20px solid white;
+      border-radius:50%;
+      margin:50px auto;
+      position: relative;
+      padding:2rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand {
+      width:50%;
+      height:6px;
+      background:black;
+      position: absolute;
+      top:50%;
+      /*pivot point of hand at their rightend rather than halfway*/
+      transform-origin: 100%;
+      /*div start horizontal - this offsets them so that they point updwards*/
+      transform: rotate(90Deg);
+      /*delay animation of hand movements rather than instant*/
+      transition: all 0.5s;
+      /*change animation curve - this can be edited in browser dev mode and settings copied over*/
+      transition-timing-function: ease-in-out;
+
+    }
+
+  </style>
+
+
+  <script>
+  //select second hand
+  var secondHand = document.querySelector(".second-hand");
+  var minuteHand = document.querySelector(".min-hand");
+  var hourHand = document.querySelector(".hour-hand");
+
+
+  function setDate(){
+    //creat current date object
+    var now =  new Date();
+    //get current seconds/minutes/hour
+    var seconds = now.getSeconds();
+    var minutes = now.getMinutes();
+    var hours = now.getHours();
+
+    //how many degrees to move per second/minute/hour
+    var secondsDegrees = (360 / 60); 
+    var minutesDegrees = (360 / 60); 
+    var hoursDegrees = (360 / 12); 
+
+    //current position is current seconds/minutes/hours multiplied by degrees per second/minute/hour 
+    //(plus 90 degrees to account for the offset we set in the CSS to point the hands upwards)
+    var currentPositionSecs = (seconds * secondsDegrees) + 90;
+    var currentPositionMins = (minutes * minutesDegrees) + 90;
+    var currentPositionHours = (hours * hoursDegrees) + 90;
+
+    //Wes Bos' one liner for current position
+    //var secondsDegrees = ((seconds / 60) * 360) + 90;
+
+    //rotate the hands to their current position using the css transform property
+    secondHand.style.transform = "rotate(" + currentPositionSecs + "deg)";
+    minuteHand.style.transform = "rotate(" + currentPositionMins + "deg)";
+    hourHand.style.transform = "rotate(" + currentPositionHours + "deg)";
+    console.log(seconds);
+  }
+
+  //call setDate every second
+  setInterval(setDate, 1000);
+
+  </script>
+</body>
+</html>
