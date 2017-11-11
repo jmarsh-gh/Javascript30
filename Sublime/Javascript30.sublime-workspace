@@ -184,7 +184,29 @@
 			}
 		},
 		{
+			"file": "/C/Users/schrobot/Dropbox/github/Javascript30/01 - JavaScript Drum Kit/style.css",
+			"settings":
+			{
+				"buffer_size": 813,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>JS Drum Kit</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n\n  <div class=\"keys\">\n    <div data-key=\"65\" class=\"key\">\n      <kbd>A</kbd>\n      <span class=\"sound\">clap</span>\n    </div>\n    <div data-key=\"83\" class=\"key\">\n      <kbd>S</kbd>\n      <span class=\"sound\">hihat</span>\n    </div>\n    <div data-key=\"68\" class=\"key\">\n      <kbd>D</kbd>\n      <span class=\"sound\">kick</span>\n    </div>\n    <div data-key=\"70\" class=\"key\">\n      <kbd>F</kbd>\n      <span class=\"sound\">openhat</span>\n    </div>\n    <div data-key=\"71\" class=\"key\">\n      <kbd>G</kbd>\n      <span class=\"sound\">boom</span>\n    </div>\n    <div data-key=\"72\" class=\"key\">\n      <kbd>H</kbd>\n      <span class=\"sound\">ride</span>\n    </div>\n    <div data-key=\"74\" class=\"key\">\n      <kbd>J</kbd>\n      <span class=\"sound\">snare</span>\n    </div>\n    <div data-key=\"75\" class=\"key\">\n      <kbd>K</kbd>\n      <span class=\"sound\">tom</span>\n    </div>\n    <div data-key=\"76\" class=\"key\">\n      <kbd>L</kbd>\n      <span class=\"sound\">tink</span>\n    </div>\n  </div>\n\n  <audio data-key=\"65\" src=\"sounds/clap.wav\"></audio>\n  <audio data-key=\"83\" src=\"sounds/hihat.wav\"></audio>\n  <audio data-key=\"68\" src=\"sounds/kick.wav\"></audio>\n  <audio data-key=\"70\" src=\"sounds/openhat.wav\"></audio>\n  <audio data-key=\"71\" src=\"sounds/boom.wav\"></audio>\n  <audio data-key=\"72\" src=\"sounds/ride.wav\"></audio>\n  <audio data-key=\"74\" src=\"sounds/snare.wav\"></audio>\n  <audio data-key=\"75\" src=\"sounds/tom.wav\"></audio>\n  <audio data-key=\"76\" src=\"sounds/tink.wav\"></audio>\n\n<script>\n\n</script>\n\n\n</body>\n</html>\n",
+			"file": "/C/Users/schrobot/Dropbox/github/Javascript30/01 - JavaScript Drum Kit/index-START.html",
+			"file_size": 1654,
+			"file_write_time": 131535604740000000,
+			"settings":
+			{
+				"buffer_size": 1654,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# Shortcuts\n\n\n## Sublime\n\n|Command|ShortCut|\n|:---:|:---:|\n|Highlight line|\t\t\t\tCtrl+L|\n|Split Selection into lines|\tCtrl+shift+L|\n|Comment Line(s)| \t\t\t\tCtrl + /|\n|Duplicate line|\t\t\t\tCtrl+shift+D|\n|Select multiple iterations|\tCtrl+D|\n|Delete line|\t\t\t\t\tCtrl+shift+k|\n|Indent (works on group)|\t\tCtrl+]|\n|Unindent| \t\t\t\t\t\tCtrl+[|\n|Paste With Indent|\t\t\t\tCtrl+shift+v|\n|Move line up or down|\t\t\tCtrl+Shft+up or down arrow|\n|Insert line after|\t\t\t\tCtrl+enter|\n|Insert line before|\t\t\tCtrl+shift+enter|\n|Wrap in HTML tags|\t\t\t\talt-shift-w|\n|Highlight contents| \t\t\tCtrl+shift+A (keep pressing to go up hierachy)|\n|Autocomplete|\t\t\t\t\tCtrl+space|\n|Create Tags from Letter|\t\tTab|\n|Highlight Parenthesis|\t\t\tCtrl+shift+M|\n|Jump to Parenthesis end|\t\tCtrl+M|\n|Highlight all children| \t\tCtrl+Shift+J|\n|Highlight up heirachy| \t\tCtrl+Shift+A|\n|Move to specific tab|\t\t\talt+n|\n|Move to specific column|\t\tCtrl+n|\n|New bookmark|\t\t\t\t\tCtrl+f2|\n|Next bookmark|\t\t\t\t\tf2|\n|Previous bookmark|\t\t\t\tshift+f2|\n|Open file (Fuzzy Logic Search)|Ctrl+P|\n|Search for named Function|\t\tCtrl+P+@ (Can type filename before @)|\n|Search for String|\t\t\t\tCtrl+P+#|\n|Go to line|\t\t\t\t\tCtrl+P then filename:line num|\n\t\t\t\t\t\t\t\tCtrl + shift + P\n\n## Github\n\nAdd an image to wiki from Github repository (change sandbox when using different repo):\n\n    [[https://github.com/jmarsh-gh/sandbox/blob/master/img/img_name.png|alt=error]]\n\n",
 			"file": "Shortcuts.md",
+			"file_size": 1370,
+			"file_write_time": 131252594270000000,
 			"settings":
 			{
 				"buffer_size": 1370,
@@ -222,6 +244,10 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Users/schrobot/Dropbox/github/Javascript30"
+	],
 	"file_history":
 	[
 		"/C/Users/schrobot/Dropbox/github/sandbox/sandbox.wiki/Shortcuts.md",
@@ -352,6 +378,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"sound",
+			"\">\n",
 			"holdString",
 			"color",
 			"colo",
@@ -411,8 +439,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								469,
+								469
 							]
 						],
 						"settings":
@@ -425,11 +453,83 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "/C/Users/schrobot/Dropbox/github/Javascript30/01 - JavaScript Drum Kit/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 813,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								223,
+								223
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "/C/Users/schrobot/Dropbox/github/Javascript30/01 - JavaScript Drum Kit/index-START.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1654,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								487,
+								487
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
 					"file": "Shortcuts.md",
 					"semi_transient": false,
 					"settings":
@@ -441,8 +541,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								856,
+								856
 							]
 						],
 						"settings":
@@ -453,7 +553,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -476,11 +576,25 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				2,
+				0,
+				3,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.305,
+			0.674583333333,
 			1.0
 		],
 		"rows":
@@ -508,6 +622,10 @@
 		"selected_items":
 		[
 			[
+				"",
+				"01 - JavaScript Drum Kit\\index-START.html"
+			],
+			[
 				"git",
 				"sandbox\\sandbox.wiki\\Github-Wiki-Guide.md"
 			],
@@ -526,10 +644,6 @@
 			[
 				"score",
 				"sandbox\\tutorial_files\\udemy_bootcamp\\score_keeper.html"
-			],
-			[
-				"",
-				"sandbox\\sandbox.wiki\\Score Keeper.md"
 			],
 			[
 				"dom",
@@ -572,7 +686,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 2,
 	"settings":
 	{
 	},
