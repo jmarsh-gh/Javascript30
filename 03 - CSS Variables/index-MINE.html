@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scoped CSS Variables and JS</title>
+</head>
+<body>
+  <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
+
+  <div class="controls">
+    <label for="spacing">Spacing:</label>
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+    <label for="blur">Blur:</label>
+    <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+    <label for="base">Base Color</label>
+    <input id="base" type="color" name="base" value="#ffc600">
+  </div>
+
+  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+
+  <style>
+
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
+
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    .hl {
+      color: var(--base);
+    }
+
+    /*
+      misc styles, nothing to do with CSS variables
+    */
+
+    body {
+      text-align: center;
+      background: #193549;
+      color: white;
+      font-family: 'helvetica neue', sans-serif;
+      font-weight: 100;
+      font-size: 50px;
+    }
+
+    .controls {
+      margin-bottom: 50px;
+    }
+
+    input {
+      width:100px;
+    }
+  </style>
+
+  <script>
+    //select all the controls
+    var inputs = document.querySelectorAll('.controls input');
+    console.log(inputs);
+    
+    //function to get the values of the changes
+    function handleUpdate(){
+      console.log(this.value);
+
+      //fetch an object of all the data-xxxx attributes. In this case just data-sizing, but there can be multiple.
+      var suffix = this.dataset.sizing || ''; //prevents undefined being appended if there is no data-dash 
+
+      //select css variable
+      var name = "--" + this.name;
+
+      //change the css variable to the changed value that triggered the event
+      //document.documentElement is the object of the root where we set the variables - top of the cascade
+      document.documentElement.style.setProperty(name, this.value + suffix);
+
+    }
+
+    //add change event listener and run handleUpdate upon change
+     inputs.forEach(function(input){
+       input.addEventListener('change', handleUpdate);
+     });
+
+    //change only updates once the change has finished/
+    //add a mousemove event so that the sliders change 'live'
+    //We need both so tha color changer works
+    inputs.forEach(function(input){
+      input.addEventListener('mousemove', handleUpdate);
+    });
+
+  </script>
+
+</body>
+</html>
